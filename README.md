@@ -12,47 +12,41 @@ A RESTful API to manage events and attendees — with scheduling, registration, 
 ```bash
 git clone https://github.com/yourusername/event-management-api.git
 cd event-management-api
+```
+
 2. Create and Activate a Virtual Environment
-bash
-Copy
-Edit
+
+```bash
 python -m venv venv
 # Windows
 venv\Scripts\activate
 # macOS/Linux
 source venv/bin/activate
-3. Install Dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Or manually:
+```
 
-bash
-Copy
-Edit
-pip install fastapi uvicorn sqlalchemy passlib[bcrypt] python-jose python-multipart
-4. Run Database Migrations (Optional if using SQLite)
-bash
-Copy
-Edit
-# SQLite will auto-create tables; for PostgreSQL use Alembic or run manually
+3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+
 5. Seed an Initial User
-bash
-Copy
-Edit
+```bash
 python -m app.seed_user
+```
 Creates a default user:
 
 username: admin
 
 password: secret
 
+
 6. Run the App
-bash
-Copy
-Edit
+```bash
 uvicorn app.main:app --reload
+```
+
 Visit docs: http://127.0.0.1:8000/docs
 
 Authentication
